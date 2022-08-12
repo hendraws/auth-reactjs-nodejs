@@ -1,0 +1,28 @@
+GET Http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJoZW5kcmEiLCJlbWFpbCI6ImVtYWlsQG1haWwuY29tIiwiaWF0IjoxNjYwMjA4Nzg2LCJleHAiOjE2NjAyMDg4MDZ9.rfaBK8gzk-xahgAEvN2Ka4RfhqlNWqe3j0o70OEwmUw
+###
+POST Http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "hendra",
+    "email" : "email@mail.com",
+    "password" : "12345678",
+    "confPassword" : "12345678"
+}
+
+###
+POST Http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "email@mail.com",
+    "password" : "12345678"
+}
+
+###
+GET Http://localhost:5000/token
+Content-Type: application/json
+
+###
+DELETE Http://localhost:5000/logout
